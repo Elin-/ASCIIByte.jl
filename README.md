@@ -85,4 +85,4 @@ julia> vowelarray = ar[ idx ]
 
 # Documentation
 
-* [Library-style function reference](https://github.com/diegozea/ASCIIByte.jl)
+* [Library-style function reference](https://github.com/diegozea/ASCIIByte.jl/blob/master/doc/Reference.md)
