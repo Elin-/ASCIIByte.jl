@@ -13,8 +13,9 @@ All basic operations defined for Char are defined for ASCIIChar too
 * Bitwise operations
 * libc character class testing functions
 
-	`bits(x::ASCIIChar)`
-
+	
+	bits(x::ASCIIChar)
+	
 Bits representation
 
 String-like behavior for ASCIIChar Arrays
