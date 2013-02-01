@@ -12,7 +12,7 @@ All basic operations defined for Char are defined for ASCIIChar too
 * Comparisons
 * Bitwise operations
 * libc character class testing functions
-	
+
 	bits(x::ASCIIChar)
 
 Bits representation
