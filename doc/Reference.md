@@ -73,10 +73,10 @@ Char8
 
 	char8(x)
 	char8(s::ASCIIString)
-	char8 (x::AbstractArray)
+	char8(x::AbstractArray)
 
 Converts to Char8 or Char8's Array
 
-	@c8_st
+	@c8_str
 
 Creates a Char8 Array
