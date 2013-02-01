@@ -8,7 +8,7 @@ function in{T}(s::AbstractArray{T},y::Union(IntSet,Set,Associative))
   res
 end
 
-check(s::ASCIIString,y)= in(s.data,y)
+in(s::ASCIIString,y)= in(s.data,y)
 
 ## Check Alphabet ##
 
@@ -18,7 +18,6 @@ function check{T}(s::AbstractArray{T},y::Union(IntSet,Set,Associative))
       error("$x not in this $(typeof(y))")
     end
   end
-  s
 end
 
 check(s::ASCIIString,y)= check(s.data,y)
