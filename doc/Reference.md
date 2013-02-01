@@ -68,7 +68,7 @@ Alphabet
 --------
 
 You can create an alphabet as an IntSet, Set or Dict.
-IntSet are more efficients.
+IntSet is the most efficient.
 
 	in{T}(s::AbstractArray{T},y::Union(IntSet,Set,Associative))
 
