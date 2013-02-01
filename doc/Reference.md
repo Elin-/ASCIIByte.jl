@@ -8,7 +8,7 @@ Package for deal with Characters of 8 bits.
 Abstract type for creation of 8-bit print-as-Char bitstypes
 All basic operations defined for Char are defined for ASCIIChar too
 * Conversion and promotion between types
-* Sum and subtraction of Int values
+* Addition and subtraction of Int values
 * Comparisons
 * Bitwise operations
 * libc character class testing functions
@@ -39,7 +39,7 @@ Repeat ASCIIChar for generate an ASCIIChar Vector
 Matching on ASCIIChar Vectors
 ----------------------------
 
-The next functions works as in String but on ASCIIChar Vectors:
+The next functions are analogous to that of string, but works on ASCIIChar Vectors:
 
 	ismatch{T<:ASCIIChar}(r::Regex, s::Vector{T})
 	contains{T<:ASCIIChar}(s::Vector{T}, r::Regex)
