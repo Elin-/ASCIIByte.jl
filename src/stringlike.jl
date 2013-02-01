@@ -22,7 +22,7 @@ function uppercase!{T<:ASCIIChar}(s::AbstractArray{T})
   return s
 end
 
-function uppercase{T<:ASCIIChar}(s::AbstractArray{T}) = uppercase!(copy(s))
+uppercase{T<:ASCIIChar}(s::AbstractArray{T}) = uppercase!(copy(s))
 
 ## Upper and Lower for ASCIIChar ##
 
