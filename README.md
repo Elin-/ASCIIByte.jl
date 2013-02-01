@@ -22,67 +22,74 @@ Package for deal with Characters of 8 bits.
 Demo for working with Char8 Arrays
 
 ```
+
 julia> using ASCIIByte
 
-julia> ar = c8"Char8!"
-6-element Char8 Array:
- C
- h
+julia> ar = c8"8-bit array"
+11-element Char8 Array:
+ 8
+ -
+ b
+ i
+ t
+  
  a
  r
- 8
- !
+ r
+ a
+ y
 
-julia> uppercase!(ar)
-6-element Char8 Array:
- C
- H
+julia> uppercase!(ar);
+
+julia> swap!(ar,'-',' ')
+11-element Char8 Array:
+ 8
+  
+ B
+ I
+ T
+  
  A
  R
- 8
- !
-
-julia> m=match(r"ar"i, ar)
-RegexMatch("AR")
-
-julia> dump(m)
-RegexMatch 
-  match: ASCIIString "AR"
-  captures: Array(Union(Nothing,ASCIIString,UTF8String),(0,)) []
-  offset: Int64 3
-  offsets: Array(Int64,(0,)) []
-
-julia> swap!(ar,'!','.')
-6-element Char8 Array:
- C
- H
- A
  R
- 8
- .
+ A
+ Y
+
+julia> match(r"array"i, ar)
+RegexMatch("ARRAY")
 
 julia> vowels = IntSet('A','a','E','e','I','i','O','o','U','u')
 IntSet(65, 69, 73, 79, 85, 97, 101, 105, 111, 117)
 
+julia> IntSet(65, 69, 73, 79, 85, 97, 101, 105, 111, 117)
+IntSet(65, 69, 73, 79, 85, 97, 101, 105, 111, 117)
+
 julia> check(ar,vowels)
-C not in this IntSet
+8 not in this IntSet
  in check at /home/dzea/.julia/ASCIIByte/src/alphabetsfunc.jl:18
 
 julia> idx = in(ar,vowels)
-6-element BitArray:
+11-element BitArray:
+ false
  false
  false
   true
  false
  false
+  true
+ false
+ false
+  true
  false
 
 julia> vowelarray = ar[ idx ]
-1-element Char8 Array:
+3-element Char8 Array:
+ I
+ A
  A
 
 ```
 
 # Documentation
 
-* [Library-style function reference](https://github.com/diegozea/ASCIIByte.jl)
+* [Library-style function reference](https://github.com/diegozea/ASCIIByte.jl/blob/master/doc/Reference.md)

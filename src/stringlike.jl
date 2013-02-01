@@ -9,10 +9,7 @@ function lowercase!{T<:ASCIIChar}(s::AbstractArray{T})
   return s
 end
 
-function lowercase{T<:ASCIIChar}(s::AbstractArray{T})
-    dat = copy(s)
-    lowercase!(dat)
-end
+lowercase{T<:ASCIIChar}(s::AbstractArray{T}) = lowercase!(copy(s))
 
 ## To Upper Case ##
 
@@ -25,10 +22,7 @@ function uppercase!{T<:ASCIIChar}(s::AbstractArray{T})
   return s
 end
 
-function uppercase{T<:ASCIIChar}(s::AbstractArray{T})
-    dat = copy(s)
-    uppercase!(dat)
-end
+function uppercase{T<:ASCIIChar}(s::AbstractArray{T}) = uppercase!(copy(s))
 
 ## Upper and Lower for ASCIIChar ##
 
@@ -73,10 +67,7 @@ function swap!{T<:ASCIIChar,Tp<:Integer,Tc<:Integer}(x::AbstractArray{T},p::Tp,c
   return x
 end
 
-function swap{T<:ASCIIChar,Tp<:Integer,Tc<:Integer}(x::AbstractArray{T},p::Tp,c::Tc)
-  arr = copy(x)
-  swap!(arr,p,c)
-end
+swap{T<:ASCIIChar,Tp<:Integer,Tc<:Integer}(x::AbstractArray{T},p::Tp,c::Tc) = swap!(copy(x),p,c)
 
 function replace{T<:ASCIIChar}(s::Vector{T}, pattern, r, limit::Integer)
     n = 1
