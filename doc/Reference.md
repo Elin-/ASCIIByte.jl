@@ -64,6 +64,25 @@ Swap between ASCIIChars on Arrays
 
 Interchange a character for other
 
+Alphabet
+--------
+
+You can create an alphabet as an IntSet, Set or Dict.
+IntSet are more efficients.
+
+	in{T}(s::AbstractArray{T},y::Union(IntSet,Set,Associative))
+
+Test for characters on an alphabet
+
+	check{T}(s::AbstractArray{T},y::Union(IntSet,Set,Associative))
+
+Check for characters on an alphabet
+
+	swap{T,Tk,Tv}(s::AbstractArray{T},y::Dict{Tk,Tv})
+	swap!{T<:Number}(s::AbstractArray{T},y::Dict{T,T})
+
+Interchange a character for other on a Dict
+
 Char8
 -----
 
